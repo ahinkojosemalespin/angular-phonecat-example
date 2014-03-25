@@ -1,32 +1,25 @@
 <!doctype html>
-<html lang="en" ng-app>
+<html lang="en" ng-app="phonecatApp">
 <head>
   <meta charset="utf-8">
   <title>Google Phone Gallery</title>
   <link rel="stylesheet" href="css/app.css">
   <link rel="stylesheet" href="css/bootstrap.css">
   <script src="lib/angular/angular.js"></script>
+  <script src="js/controllers.js"></script>
 </head>
-<body>
+<body ng-controller="PhoneListCtrl">
+  <h1>{{name}}</h1>
   <ul>
-    <li>
-      <span>Nexus S</span>
-      <p>Fast just got faster with Nexus S.</p>
-      <p>The nexus S offers a great Android experience</p>
-    </li>
-    <li>
-      <span>Motorola XOOM™ with Wi-Fi</span>
-      <p>
-        The Next, Next Generation tablet.
-      </p>
-      <p>Features:</p>
-      <ul>
-        <li>Front and rear camera</li>
-        <li>1.2 Ghz dual core Snapdragon processor</li>
-        <li>512 MB RAM</li>
-      </ul>
+    <li ng-repeat="phone in phones">
+      {{phone.name}}
+      <p>{{phone.snippet}}</p>
     </li>
   </ul>
-
+  <p>Total number of phones: {{phones.length}}</p>
+    <table>
+      <tr><th>row number</th></tr>
+      <tr ng-repeat="i in [0, 1, 2, 3, 4, 5, 6, 7]"><td>{{i+1}}</td></tr>
+    </table>
 </body>
 </html>
