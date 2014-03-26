@@ -13,7 +13,8 @@ phonecatApp.controller('PhoneListCtrl', function($scope) {
     {'name': 'MOTOROLA XOOM™',
      'snippet': 'The Next, Next Generation tablet.'},
     {'name': 'Alcatel TPOP',
-     'snippet': 'Simple android phone'}
+     'snippet': 'A simple android phone'},
+    {'name': 'Nokia X',
+     'snippet': 'The first Nokia phone with android!'}
   ];
-  $scope.name = "List of Android phones";
 });
